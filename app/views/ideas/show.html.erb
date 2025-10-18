@@ -1,0 +1,13 @@
+<% if notice %>
+<div class="alert alert-success my-3" role="alert">
+  <%= notice %>
+</div>
+<% end %>
+<%= render @idea %>
+
+<div>
+  <%= link_to "Edit this idea", edit_idea_path(@idea) %> |
+  <%= link_to "Back to ideas", ideas_path %>
+
+  <%= button_to "Destroy this idea", @idea, method: :delete, class: "btn btn-primary" %>
+</div>
